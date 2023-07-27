@@ -1,0 +1,22 @@
+﻿<Window x:Class="Project_Lecteur.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Project_Lecteur"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="250" Width="200">
+    <WrapPanel Orientation="Horizontal" Margin="0,0,0,60" Height="150" Width="200">
+        <Label Content="Player audio" Width="200" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBox x:Name="FilePath" VerticalAlignment="Center"  Width="200" Text=" Ouvrir un fichier mp3" TextChanged="FilePath_TextChanged" />
+        <Button  x:Name="OpenFile"  Width="50" Height="20" Click="OpenFile_Click" Content="Ouvrir"/>
+        <Button  x:Name="Jouer"  Width="50" Height="20" Click="Jouer_Click" Content="Jouer"/>
+        <Button  x:Name="pause"  Width="50" Height="20" Click="pause_Click" Content="Pause"/>
+        <Button  x:Name="stop"  Width="50" Height="20" Click="stop_Click" Content="Stop"/>
+
+        <Slider Width="200" x:Name="vol" Minimum="0" Maximum="100" Value="50" ValueChanged="vol_ValueChanged" />
+        <ProgressBar x:Name="prog" Height="10" Width="200" Value="0" Minimum="0" Maximum="100"/>
+     
+    </WrapPanel>
+
+</Window>
